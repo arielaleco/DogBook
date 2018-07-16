@@ -1,8 +1,9 @@
 app.factory('dogsService', function ($log, $q, $http) {
 
     dogsArr = [];
-    function Dog(breeds) {
-        this.breeds = breeds;
+    function Dog(breed , imageUrl) {
+        this.breed = breed;
+        this.imageUrl=imageUrl;
     }
 
 
@@ -12,9 +13,26 @@ app.factory('dogsService', function ($log, $q, $http) {
         $http.get("https://dog.ceo/api/breeds/list/all").then(function (response) {
             console.log(response);
 
-            for (var x in response.data.message) { 
-                console.log(x);
-                dogsArr.push(new Dog(x));
+            for (var dogName in response.data.message) { 
+                console.log(dogName);
+
+                //get image for each dog
+                //===============================
+                var oneDogUrl = "https://dog.ceo/api/breed/"+dogName+ "/images/random";
+                $http.get(oneDogUrl).then(function (response) {    
+                    var imageUrl = response.data.message;                        
+                    dogsArr.push(new Dog(dogName, imageUrl));                                                                       
+                }, function (error) {
+                
+                    dogsArr.push(new Dog(dogName, "https://images.dog.ceo/breeds/bluetick/n02088632_152.jpg"));
+    
+                })  
+                //===============================
+
+
+
+
+                
              }            
         },
 
@@ -23,6 +41,8 @@ app.factory('dogsService', function ($log, $q, $http) {
                 $log.Error;
 
             });
+
+            
     }
 
     function GetAllDogs() {
@@ -32,7 +52,7 @@ app.factory('dogsService', function ($log, $q, $http) {
         return asyncAction.promise;
     }
 
-    //https://dog.ceo/api/breed/affenpinscher/images/random
+    
 
 
     return {

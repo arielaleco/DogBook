@@ -1,4 +1,4 @@
-app.controller("dogsCtrl", function ($scope, dogsService) {
+app.controller("dogsCtrl", function ($scope, $location,dogsService) {
 
     $scope.dogsArr = [];
 
@@ -35,8 +35,9 @@ app.controller("dogsCtrl", function ($scope, dogsService) {
 
     }
 
-    $scope.openOneDog = function(){
-        console.log("here");
+    $scope.openOneDog = function(dog){
+        console.log("here" + dog.breed);
+        $location.path("/oneDog/" + dog.breed);
     }
 
     

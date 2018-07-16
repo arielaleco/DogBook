@@ -6,10 +6,10 @@ app.config(function($routeProvider) {
       templateUrl: 'index.html'
       
     })
-    // .when('/celebs', {
-    //   templateUrl: 'app/celebs/celebs.html',
-    //   controller: 'galleryCtrl'
-    // })
+    .when('/oneDog:dogName', {
+      templateUrl: 'app/oneDog/oneDog.html',
+      controller: 'oneDogCtrl'
+    })
     // .when('/moviessection', {
     //     templateUrl: 'app/movies/moviessection.html',
     //     controller: 'movieCtrl'

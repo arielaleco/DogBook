@@ -1,3 +1,13 @@
 body{
     font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+}
+
+.fetching-now{
+    background-color: lightgreen;   
+    opacity: 0.2;
+}
+
+.no-fetch{
+    color:purple;
 }

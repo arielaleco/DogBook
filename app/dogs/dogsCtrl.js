@@ -1,7 +1,7 @@
-app.controller("dogsCtrl", function ($scope,dogsService) {
-    
+app.controller("dogsCtrl", function ($scope, dogsService) {
+
     $scope.dogsArr = [];
-    
+
     dogsService.GetAllDogs().then(function (dogsArr) {
         console.log(dogsArr);
         $scope.dogsArr = dogsArr;
@@ -10,9 +10,36 @@ app.controller("dogsCtrl", function ($scope,dogsService) {
         $log.error(error)
     });
 
-    $scope.ChangeAllImages = function (){    
-        console.log("ChangeAllImages");
+    $scope.ChangeAllImages = function () {
+       
+         for (var i = 0; i < dogsArr.length; i++) {
+
+               dogsService.getOneDogImageFromAPI(i).then(function (dogIndex) {
+                $scope.message = "replaceing image " + dogIndex +" /" + dogsArr.length ;  
+               
+            }, function (error) {
+               
+
+            })
+         }
+         $scope.message ="";
+
+        //-----------------------------------------------------
+        // $scope.message = "replaceing " + dogsArr.length + " images..."
+        // // go over the array and bring one image at a time
+        // for (var i = 0; i < dogsArr.length; i++) {
+        //     $scope.message = "replaceing " + dogsArr[i].breed + " image now (" + i + "/" + dogsArr.length + ")";
+        //     dogsService.changeThisDogImage(i);
+        // }
+
+
     }
+
+    $scope.openOneDog = function(){
+        console.log("here");
+    }
+
+    
 
 
 });

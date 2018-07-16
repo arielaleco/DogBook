@@ -38,6 +38,7 @@
             <h1>Dogs Application</h1>
             <p>Its amazing what people are willing to do ...</p>
             <button ng-click="ChangeAllImages()" type="button" class="btn btn-primary">Change Images - Its Fun ! Do It !</button>
+            <p>{{message}}</p>
         </div>
 
         <div class="container">
@@ -48,10 +49,11 @@
         <div class="row">
               
                 <div ng-repeat="dog in dogsArr" class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="card p-1 mb-4" >
-                        <img class="card-img-top" ng-src="{{dog.imageUrl}}" alt="Card image" style="width:100%">
+                    <div class="card p-1 mb-4"   ng-class="{{'dog.fetchingNow'}}">
+                        <a href="javascript:void(0)" ng-click="openOneDog()">
+                        <img class="card-img-top" ng-src="{{dog.imageUrl}}" alt="Card image" ></a>
                         <div class="card-body">                               
-                            <h4 class="card-title">{{dog.breed}}</h4>                                                        
+                            <h4 class="card-title"    >{{dog.breed}}</h4>                                                        
                         </div>
                     </div>
                 </div>

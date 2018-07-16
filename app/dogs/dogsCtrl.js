@@ -10,5 +10,9 @@ app.controller("dogsCtrl", function ($scope,dogsService) {
         $log.error(error)
     });
 
+    $scope.ChangeAllImages = function (){    
+        console.log("ChangeAllImages");
+    }
+
 
 });

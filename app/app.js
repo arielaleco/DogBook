@@ -1,12 +1,15 @@
 var app = angular.module("dogsApp" , ["ngRoute"]); 
 
 app.config(function($routeProvider) {
+
+  alert($routeProvider);
     $routeProvider
     .when('/', {
       templateUrl: 'index.html'
       
     })
-    .when('/oneDog:dogName', {
+    .when('/oneDog/:dogBreed', {
+      
       templateUrl: 'app/oneDog/oneDog.html',
       controller: 'oneDogCtrl'
     })

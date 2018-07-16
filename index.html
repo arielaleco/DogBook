@@ -28,6 +28,8 @@
     <script src="/app/dogs/dogsService.js"></script>
     <script src="/app/dogs/dogsCtrl.js"></script>
 
+    <script src="/app/oneDog/oneDogCtrl.js"></script>
+
 </head>
 
 <body>
@@ -55,6 +57,7 @@
                         <div class="card-body">                               
                             <h4 class="card-title"    >{{dog.breed}}</h4>                                                        
                         </div>
+                        <button ng-click="openOneDog(dog)">PushMe</button>
                     </div>
                 </div>
 

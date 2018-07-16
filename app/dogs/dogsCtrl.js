@@ -36,7 +36,7 @@ app.controller("dogsCtrl", function ($scope, $location,dogsService) {
     }
 
     $scope.openOneDog = function(dog){
-        console.log("here" + dog.breed);
+        console.log("open one dog -->" + dog.breed);
         $location.path("/oneDog/" + dog.breed);
     }
 

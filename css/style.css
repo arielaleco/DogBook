@@ -1,6 +1,9 @@
 body{
     font-family: 'Gloria Hallelujah', cursive;
     text-align: center;
+    background-image: url("https://images.unsplash.com/photo-1524952625400-34fe1df7cf17?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=33e14df4b3af9a5aace716a14d8c3956&auto=format&fit=crop&w=1053&q=80");
+    background-size: cover;
+    
 }
 
 .fetching-now{
@@ -9,11 +12,28 @@ body{
 }
 
 .no-fetch{
-    color:purple;
+    color:rgb(0, 22, 8);
 }
 
 .card .card-img-overlay{
     text-align: left;
     padding-top:1px;
     padding-left:1px;
+}
+
+.jumbotron{
+    padding: 1rem;
+}
+
+.btn-info{
+    background-color:rgb(108, 163, 63); 
+}
+.btn-primary{
+    background-color:rgb(46, 68, 28); 
+}
+
+.set-number{
+    font-size: 12px;
+    padding: 0px;
+    margin: 0px;
 }

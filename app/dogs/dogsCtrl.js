@@ -3,15 +3,18 @@ app.controller("dogsCtrl", function ($scope, $location,dogsService) {
     $scope.dogsArr = [];
 
     dogsService.GetAllDogs().then(function (dogsArr) {
-        console.log(dogsArr);
+        console.log("Finished ??? " + dogsArr);
         $scope.dogsArr = dogsArr;
+       
     }, function (error) {
 
         $log.error(error)
     });
 
+    
+
     $scope.ChangeAllImages = function () {
-       
+      
          for (var i = 0; i < dogsArr.length; i++) {
 
                dogsService.getOneDogImageFromAPI(i).then(function (dogIndex) {
@@ -36,7 +39,7 @@ app.controller("dogsCtrl", function ($scope, $location,dogsService) {
     }
 
     $scope.openOneDog = function(dog){
-        console.log("open one dog -->" + dog.breed);
+        console.log("open one dog -->" + dog.breed);      
         $location.path("/oneDog/" + dog.breed);
     }
 

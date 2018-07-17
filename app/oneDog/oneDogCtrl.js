@@ -13,12 +13,14 @@ app.controller("oneDogCtrl", function ($scope,$location, $routeParams,dogsServic
 
 
     $scope.openOneDogLargeImage=  function (dogImage){
-        console.log("open one dog image-->" + dogImage);                      
-        $location.path("/oneDogLargeImage/" + dogImage);
-    }
-    // go and fetch al images for this breed
-    //dogsService.GetAllImagesForDogBreed()
+        console.log("open one dog image-->" + dogImage);     
 
+      //  need to replace all  https://images.dog.ceo/breeds/ridgeback-rhodesian/n02087394_10588.jpg
+        dogsService.setSelectedDogImage(dogImage);
+        $location.path("/oneDogLargeImage" );
+       
+    }
+    
 
 
 });

@@ -11,10 +11,12 @@ app.config(function($routeProvider) {
       templateUrl: 'app/oneDog/oneDog.html',
       controller: 'oneDogCtrl'
     })
-    .when('/oneDogLargeImage/:dogImage', {
+    
+     .when('/oneDogLargeImage', {
       
       templateUrl: 'app/oneDog/oneDogLargeImage.html',
       controller: 'oneDogImageCtrl'
+      //:dogImage
     })
     // .when('/moviessection', {
     //     templateUrl: 'app/movies/moviessection.html',

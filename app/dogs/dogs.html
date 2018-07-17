@@ -1,5 +1,5 @@
 <main ng-controller="dogsCtrl">
-        {{5+5}}
+    
 <div class="container">
 
         <button ng-click="ChangeAllImages()" type="button" class="btn btn-primary">Change Images - Its Fun ! Do It !</button>
@@ -8,11 +8,19 @@
     <div class="row">
 
         <div ng-repeat="dog in dogsArr" class="col-xl-3 col-lg-4 col-sm-6">
+                <div class="card-img-overlay">        
+                                    
+                         <p>1/1asdsaddsadsasdasdasdadsaasd</p>   
+                    
+                    </div>
             <div class="card p-1 mb-4" ng-class="{{'dog.fetchingNow'}}">
+                    
                 <a href="javascript:void(0)" ng-click="openOneDog(dog)">
                     <img class="card-img-top" ng-src="{{dog.imageUrl}}" alt="Card image">
                 </a>
-                <div class="card-body">
+                
+                <div >
+                    <p class="set-number">{{dog.index}}/{{dogsArr.length}}</p>
                     <h4 class="card-title">{{dog.breed}}</h4>
                 </div>
                 <button class="btn btn-info" ng-click="openOneDog(dog)">Learn More !</button>

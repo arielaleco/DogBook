@@ -1,17 +1,20 @@
 var app = angular.module("dogsApp" , ["ngRoute"]); 
 
-app.config(function($routeProvider) {
-
-  alert($routeProvider);
+app.config(function($routeProvider) {  
     $routeProvider
     .when('/', {
-      templateUrl: 'index.html'
-      
+      templateUrl: 'app/dogs/dogs.html',
+      controller: 'dogsCtrl'
     })
     .when('/oneDog/:dogBreed', {
       
       templateUrl: 'app/oneDog/oneDog.html',
       controller: 'oneDogCtrl'
+    })
+    .when('/oneDogLargeImage/:dogImage', {
+      
+      templateUrl: 'app/oneDog/oneDogLargeImage.html',
+      controller: 'oneDogImageCtrl'
     })
     // .when('/moviessection', {
     //     templateUrl: 'app/movies/moviessection.html',

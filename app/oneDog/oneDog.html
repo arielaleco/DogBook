@@ -2,4 +2,41 @@
 
     <h1>All Images For {{dogBreed}}</h1>
 
+    <div class="container">
+        <div class="row">
+
+            <div ng-repeat="dog in oneBreedDogsArr" class="col-xl-3 col-lg-4 col-sm-6">
+
+                    <div class="card img-fluid" >
+                            <img class="card-img-top" ng-src="{{dog}}" alt="Card image" style="width:100%">
+                            <div class="card-img-overlay">        
+                                    
+                                    <button class="btn btn-info" ng-click="openOneDogLargeImage(dog)"><i class="fas fa-expand"></i></button>
+                            
+                            </div>
+                          </div>
+
+                <!-- <div class="card p-1 mb-4">
+                    <a href="javascript:void(0)" ng-click="openOneDog(dog)">
+                        
+                        <img class="card-img-top" ng-src="{{dog}}" alt="Card image">
+                    </a>
+
+
+                </div> -->
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
 </div>

@@ -20,6 +20,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
 
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 
@@ -29,46 +31,30 @@
     <script src="/app/dogs/dogsCtrl.js"></script>
 
     <script src="/app/oneDog/oneDogCtrl.js"></script>
+    <script src="/app/oneDog/oneDogImageCtrl.js"></script>
+    
+
+
 
 </head>
 
 <body>
-    <main ng-controller="dogsCtrl">
-        {{5+5}}
+  
+        
         <!--  https://dog.ceo/dog-api/ -->
         <div class="jumbotron">
             <h1>Dogs Application</h1>
             <p>Its amazing what people are willing to do ...</p>
-            <button ng-click="ChangeAllImages()" type="button" class="btn btn-primary">Change Images - Its Fun ! Do It !</button>
-            <p>{{message}}</p>
+           
         </div>
 
-        <div class="container">
-           
+        <ng-view>
+
+        </ng-view>
+
         
 
-
-        <div class="row">
-              
-                <div ng-repeat="dog in dogsArr" class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="card p-1 mb-4"   ng-class="{{'dog.fetchingNow'}}">
-                        <a href="javascript:void(0)" ng-click="openOneDog(dog)">
-                        <img class="card-img-top" ng-src="{{dog.imageUrl}}" alt="Card image" ></a>
-                        <div class="card-body">                               
-                            <h4 class="card-title"    >{{dog.breed}}</h4>                                                        
-                        </div>
-                        <button ng-click="openOneDog(dog)">PushMe</button>
-                    </div>
-                </div>
-
-
-
-
-            </div>        
-
-        </div>
-
-    </main>
+  
 
 
 

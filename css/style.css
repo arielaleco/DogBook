@@ -1,8 +1,11 @@
 body{
     font-family: 'Gloria Hallelujah', cursive;
     text-align: center;
-    background-image: url("https://images.unsplash.com/photo-1524952625400-34fe1df7cf17?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=33e14df4b3af9a5aace716a14d8c3956&auto=format&fit=crop&w=1053&q=80");
-    background-size: cover;
+    background: linear-gradient(to bottom right, rgb(46, 68, 28), rgb(131, 252, 32));
+    background-repeat: no-repeat;
+    /* background-image: url("https://images.unsplash.com/photo-1524952625400-34fe1df7cf17?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=33e14df4b3af9a5aace716a14d8c3956&auto=format&fit=crop&w=1053&q=80");
+    background-size: cover; */
+    position: relative;
     
 }
 
@@ -23,6 +26,10 @@ body{
 
 .jumbotron{
     padding: 1rem;
+    margin-bottom: 0px;
+    background-color: rgb(46, 68, 28);
+    border-bottom: 1px solid white;
+    color: white;
 }
 
 .btn-info{
@@ -30,6 +37,7 @@ body{
 }
 .btn-primary{
     background-color:rgb(46, 68, 28); 
+    margin-top:10px
 }
 
 .set-number{
@@ -37,3 +45,23 @@ body{
     padding: 0px;
     margin: 0px;
 }
+.big-image{
+    width:700px;
+    /* max-width: 99%;
+    max-height: 99%; */
+}
+
+   .one-background1
+   {
+       padding-top: 30px;
+       height:80vh;
+       /* background: linear-gradient(to bottom right, rgb(46, 68, 28), rgb(108, 163, 63));
+       position: relative;
+       height:80vh;
+       object-fit: cover; */
+       
+   }
+   .header{
+       margin: 20px;
+       color: white;
+   }
